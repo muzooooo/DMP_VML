@@ -1,0 +1,46 @@
+{# C:\DMP\DMP\templates\base.html #}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Vangarde Music Limited{% endblock title %}</title>
+    {# Link to a future CSS file if you create one in dmp_project/static/css/style.css #}
+    {# <link rel="stylesheet" href="{% static 'css/style.css' %}"> #}
+    <style>
+        /* Basic styling for the demo */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f8f9fa; color: #343a40; }
+        header { background-color: #3f51b5; color: white; padding: 15px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        header h1 { margin: 0; font-size: 2.5em; }
+        nav { background-color: #5C6BC0; padding: 10px 0; text-align: center; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; display: inline-block; transition: background-color 0.3s ease; }
+        nav a:hover { background-color: #3f51b5; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        footer { text-align: center; padding: 20px; margin-top: 40px; background-color: #e9ecef; color: #6c757d; font-size: 0.9em; }
+        .content-section { margin-bottom: 30px; }
+        h2 { color: #3f51b5; border-bottom: 2px solid #5C6BC0; padding-bottom: 5px; margin-top: 20px; }
+    </style>
+    {% block extra_head %}{% endblock extra_head %}
+</head>
+<body>
+    <header>
+        <h1>Vangarde Music Limited</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'public_release_list' %}">Releases</a>
+        {# Add more navigation links here as you create more public pages #}
+        <a href="{% url 'admin:index' %}">Admin Panel</a>
+    </nav>
+    <div class="container">
+        {% block content %}
+            {# Default content if no specific content is provided by child templates #}
+        {% endblock content %}
+    </div>
+    <footer>
+        <p>&copy; {% now "Y" %} Vangarde Music Limited. All rights reserved.</p>
+    </footer>
+    {% block extra_js %}{% endblock extra_js %}
+</body>
+</html>

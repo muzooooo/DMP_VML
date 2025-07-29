@@ -1,0 +1,230 @@
+/* Custom Admin Theme: Black and White */
+
+/*-------------------------------------
+  General Body and Link Styles
+-------------------------------------*/
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    color: #000;
+}
+
+a:hover {
+    color: #555;
+}
+
+/*-------------------------------------
+  Header and Branding
+-------------------------------------*/
+
+#header {
+    background-color: #000;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+#site-name {
+    color: #fff;
+}
+
+#user-tools a {
+    color: #fff;
+}
+
+#user-tools a:hover {
+    text-decoration: underline;
+}
+
+/*-------------------------------------
+  Navigation and Sidebar
+-------------------------------------*/
+
+#changelist-filter {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#changelist-filter h2 {
+    background-color: #333;
+    color: #fff;
+}
+
+/*-------------------------------------
+  Modules and Tables
+-------------------------------------*/
+
+.module h2, .module caption {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.module table th {
+    background-color: #e9e9e9;
+    color: #000;
+}
+
+.module table td {
+    border-bottom: 1px solid #ddd;
+}
+
+/*-------------------------------------
+  Form and Button Styles
+-------------------------------------*/
+
+.submit-row {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.button, input[type="submit"], input[type="button"] {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    text-transform: uppercase;
+}
+
+.button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #333;
+    border: 1px solid #333;
+}
+
+/*-------------------------------------
+  IMPORTANT: OVERRIDE LIGHT MODE VARIABLES TO BE BLACK/WHITE/GRAY
+  This section targets Django's default light theme variables
+-------------------------------------*/
+
+html[data-theme="light"], :root {
+    /* Primary colors */
+    --primary: #000; /* Black */
+    --secondary: #333; /* Dark Gray */
+    --accent: #eee; /* Light Gray */
+
+    /* Text colors */
+    --primary-fg: #000; /* Black */
+    --body-fg: #333; /* Dark Gray */
+    --body-quiet-color: #666; /* Medium Gray */
+    --body-loud-color: #000; /* Black */
+
+    /* Backgrounds */
+    --body-bg: #f4f4f4; /* Light Gray */
+    --darkened-bg: #e9e9e9; /* Light Gray */
+    --selected-bg: #ddd; /* Light Gray */
+    --selected-row: #e9e9e9; /* Light Gray */
+
+    /* Header specifics */
+    --header-color: #fff; /* White */
+    --header-branding-color: var(--accent); /* Light Gray */
+    --header-bg: var(--primary); /* Black */
+    --header-link-color: var(--primary-fg); /* White */
+
+    /* Breadcrumbs */
+    --breadcrumbs-fg: #000; /* Black */
+    --breadcrumbs-link-fg: #000; /* Black */
+    --breadcrumbs-bg: #f4f4f4; /* Light Gray */
+
+    /* Links */
+    --link-fg: #000; /* Black */
+    --link-hover-color: #555; /* Medium Gray */
+    --link-selected-fg: #000; /* Black */
+
+    /* Borders and Hairlines */
+    --hairline-color: #ddd; /* Light Gray */
+    --border-color: #ccc; /* Medium Light Gray */
+
+    /* Messages (Success, Warning, Error) */
+    --error-fg: #333; /* Dark Gray (for error text color) */
+    --message-success-bg: #e9e9e9; /* Light Gray (for success messages) */
+    --message-warning-bg: #f4f4f4; /* Light Gray (for warning messages) */
+    --message-error-bg: #e9e9e9; /* Light Gray (for error messages) */
+
+    /* Buttons (General, Default, Close, Delete) */
+    --button-fg: #fff; /* White */
+    --button-bg: var(--primary); /* Black */
+    --button-hover-bg: #333; /* Dark Gray */
+    --default-button-bg: var(--secondary); /* Dark Gray */
+    --default-button-hover-bg: #666; /* Medium Gray */
+    --close-button-bg: #000; /* Black */
+    --close-button-hover-bg: #333; /* Dark Gray */
+    --delete-button-bg: #000; /* Black */
+    --delete-button-hover-bg: #333; /* Dark Gray */
+
+    /* Object Tools (e.g., Save, Save and continue editing) */
+    --object-tools-fg: var(--button-fg); /* White */
+    --object-tools-bg: var(--close-button-bg); /* Black */
+    --object-tools-hover-bg: var(--close-button-hover-bg); /* Dark Gray */
+}
+
+
+/*-------------------------------------
+  IMPORTANT: OVERRIDE DARK MODE VARIABLES TO BE BLACK/WHITE/GRAY
+  This section ensures all colors are B&W even in dark mode
+  (This was provided previously and is still needed for system dark mode)
+-------------------------------------*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Primary colors */
+        --primary: #000; /* Black */
+        --secondary: #333; /* Dark Gray */
+        --accent: #eee; /* Light Gray */
+
+        /* Text colors */
+        --primary-fg: #fff; /* White */
+        --body-fg: #333; /* Dark Gray */
+        --body-quiet-color: #666; /* Medium Gray */
+        --body-loud-color: #000; /* Black */
+
+        /* Backgrounds */
+        --body-bg: #f4f4f4; /* Light Gray */
+        --darkened-bg: #e9e9e9; /* Light Gray */
+        --selected-bg: #ddd; /* Light Gray */
+        --selected-row: #e9e9e9; /* Light Gray */
+
+        /* Header specifics */
+        --header-color: #fff; /* White */
+        --header-branding-color: var(--accent); /* Light Gray */
+        --header-bg: var(--primary); /* Black */
+        --header-link-color: var(--primary-fg); /* White */
+
+        /* Breadcrumbs */
+        --breadcrumbs-fg: #000; /* Black */
+        --breadcrumbs-link-fg: #000; /* Black */
+        --breadcrumbs-bg: #f4f4f4; /* Light Gray */
+
+        /* Links */
+        --link-fg: #000; /* Black */
+        --link-hover-color: #555; /* Medium Gray */
+        --link-selected-fg: #000; /* Black */
+
+        /* Borders and Hairlines */
+        --hairline-color: #ddd; /* Light Gray */
+        --border-color: #ccc; /* Medium Light Gray */
+
+        /* Messages (Success, Warning, Error) */
+        --error-fg: #333; /* Dark Gray (for error text color) */
+        --message-success-bg: #e9e9e9; /* Light Gray (for success messages) */
+        --message-warning-bg: #f4f4f4; /* Light Gray (for warning messages) */
+        --message-error-bg: #e9e9e9; /* Light Gray (for error messages) */
+
+        /* Buttons (General, Default, Close, Delete) */
+        --button-fg: #fff; /* White */
+        --button-bg: var(--primary); /* Black */
+        --button-hover-bg: #333; /* Dark Gray */
+        --default-button-bg: var(--secondary); /* Dark Gray */
+        --default-button-hover-bg: #666; /* Medium Gray */
+        --close-button-bg: #000; /* Black */
+        --close-button-hover-bg: #333; /* Dark Gray */
+        --delete-button-bg: #000; /* Black */
+        --delete-button-hover-bg: #333; /* Dark Gray */
+
+        /* Object Tools (e.g., Save, Save and continue editing) */
+        --object-tools-fg: var(--button-fg); /* White */
+        --object-tools-bg: var(--close-button-bg); /* Black */
+        --object-tools-hover-bg: var(--close-button-hover-bg); /* Dark Gray */
+    }
+}

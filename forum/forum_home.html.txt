@@ -1,0 +1,2 @@
+<h1>Welcome to the Forum!</h1>
+<p>This is the homepage of your new forum.</p>

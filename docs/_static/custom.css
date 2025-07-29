@@ -1,0 +1,13 @@
+.tgt a, .tgt em {
+    color: #00563B !important;
+}
+
+.tgt a {
+    font-size: 1.2em !important;
+}
+
+div.container.tgt {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
