@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-@1%0^u09&_j2o6g9h5q!t8^p$h
 # Read the environment variable, defaulting to False if not set
 DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['192.168.100.223','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['192.168.100.223','127.0.0.1', 'localhost', 'MUZO.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
