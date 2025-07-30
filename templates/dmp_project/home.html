@@ -1,0 +1,23 @@
+{# C:\DMP\DMP\dmp_project\templates\dmp_project\home.html #}
+{% extends 'base.html' %} {# This tells Django to use the base.html template #}
+
+{% block title %}Welcome{% endblock title %}
+
+{% block content %}
+    <div class="content-section">
+        <h2>Welcome to Vangarde Music Limited's Public Portal!</h2>
+        <p>
+            We are a cutting-edge music publishing company dedicated to
+            supporting artists and managing their valuable musical works.
+            Explore our catalog, learn about our artists, and discover new music.
+        </p>
+        <p>
+            This is the public-facing area of our application. To manage releases,
+            works, and other administrative tasks, please visit the
+            <a href="{% url 'admin:index' %}">Admin Panel</a>.
+        </p>
+        <p>
+            Check out our <a href="{% url 'distribution_demo:public_release_list' %}">latest releases</a>!
+        </p>
+    </div>
+{% endblock content %}
